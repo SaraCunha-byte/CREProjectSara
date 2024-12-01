@@ -37,6 +37,7 @@ public class SearchAndCheckProducts {
 		searchButton = new WebDriverWait(driver, Duration.ofSeconds(10))
 				.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[value='Search']")));
 		searchButton.click();
+		TestUtils.testSleep();
 	}
 
 	public void verifyIfProducFoundandClick() {
@@ -44,6 +45,7 @@ public class SearchAndCheckProducts {
 				.elementToBeClickable(By.xpath("//a[normalize-space()='Friendly dog from England']")));
 		assertEquals(productLink.getText(), "Friendly dog from England");
 		productLink.click();
+		TestUtils.testSleep();
 	}
 
 	public void chooseProductFromList() {
@@ -51,6 +53,7 @@ public class SearchAndCheckProducts {
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='EST-6']")));
 		assertEquals(productList.getText(), "EST-6");
 		productList.click();
+		TestUtils.testSleep();
 	}
 
 	public void verifyProductDetails() {
@@ -63,6 +66,7 @@ public class SearchAndCheckProducts {
 		productPrice = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//td[normalize-space()='$18.50']")));
 		assertEquals(productPrice.getText(), "$18.50");
+		TestUtils.testSleep();
 	}
 
 }

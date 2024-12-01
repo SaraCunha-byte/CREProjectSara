@@ -50,4 +50,6 @@ public class SearchAndCheckProductsSteps {
 	public void i_should_be_redirected_to_the_product_details_page() {
 		searchAndCheckProducts.verifyProductDetails();
 	}
+	
+
 }

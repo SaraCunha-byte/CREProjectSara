@@ -6,9 +6,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserConfiguration {
-	public static WebDriver driver;
+	public WebDriver driver;
 
-	public static WebDriver startBrowser(String browser) {
+	public WebDriver startBrowser(String browser) {
 
 		switch (browser.toLowerCase()) {
 		case "chrome":
@@ -31,9 +31,8 @@ public class BrowserConfiguration {
 		return driver;
 	}
 
-	public static void closeBrowser() {
-
-		if (driver != null) {
+	public void closeBrowser() {
+			if (driver != null) {
 			driver.quit();
 			driver = null;
 		}

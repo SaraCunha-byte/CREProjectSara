@@ -1,7 +1,6 @@
 package jPetStoreSteps;
 
 import org.openqa.selenium.WebDriver;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import pageObjects.AddProductToCart;
@@ -31,4 +30,5 @@ public class AddProductToCartSteps {
 	public void i_click_on_the_add_to_cart_button() {
 		addProductsToCart.addToCart();
 	}
+
 }

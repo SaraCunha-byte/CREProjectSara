@@ -10,6 +10,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utils.TestUtils;
+
 public class AddProductToCart {
 	private final WebDriver driver;
 
@@ -25,15 +27,18 @@ public class AddProductToCart {
 		productToAdd = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.elementToBeClickable(By.linkText("Friendly green friend")));
 		productToAdd.click();
+		TestUtils.testSleep();
 	}
 
 	public void addToCart() {
 		addToCartButton = new WebDriverWait(driver, Duration.ofSeconds(5))
-				.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".Button")));
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Add to Cart']")));
 		addToCartButton.click();
+		TestUtils.testSleep();
 		shoppingCart = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//h2[normalize-space()='Shopping Cart']")));
 		assertEquals(shoppingCart.getText(), "Shopping Cart");
+		TestUtils.testSleep();
 	}
 
 }

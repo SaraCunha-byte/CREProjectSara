@@ -1,11 +1,13 @@
 package jPetStoreTestRunner;
 
+import org.testng.annotations.DataProvider;
+
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 
-	    //tags = "@tag5", // Tag to select the scenarios to run */
+		//tags = "@tag2", // Tag to select the scenarios to run */
 		features = "src/test/resources", // Path to the feature files
 		glue = "jPetStoreSteps", // Package containing the step definitions
 		plugin = { "pretty", // Formats console output for better readability
@@ -17,4 +19,9 @@ import io.cucumber.testng.CucumberOptions;
 		})
 public class TestRunner extends AbstractTestNGCucumberTests {
 
+	@Override
+    @DataProvider(parallel = true)
+	public Object[][] scenarios() {
+		return super.scenarios();
+	}
 }

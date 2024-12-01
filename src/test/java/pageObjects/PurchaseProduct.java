@@ -52,6 +52,7 @@ public class PurchaseProduct {
 		proceedToCheckOut = new WebDriverWait(driver, Duration.ofSeconds(5)).until(
 				ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Proceed to Checkout']")));
 		proceedToCheckOut.click();
+		TestUtils.testSleep();
 	}
 
 	public void paymentDetails() {
@@ -65,17 +66,20 @@ public class PurchaseProduct {
 		continueButton = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@name='newOrder']")));
 		continueButton.click();
+		TestUtils.testSleep();
 	}
 
 	public void confirmOrder() {
 		confirmButton = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Confirm']")));
 		confirmButton.click();
+		TestUtils.testSleep();
 	}
 
 	public void orderConfirmed() {
 		orderConfirmation = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("ul[class='messages'] li")));
 		assertEquals(orderConfirmation.getText(), "Thank you, your order has been submitted.");
+		TestUtils.testSleep();
 	}
 }

@@ -53,5 +53,5 @@ public class PurchaseProductSteps {
 	public void i_should_see_a_confirmation_message() {
 		purchaseProduct.orderConfirmed();
 	}
-
+	
 }

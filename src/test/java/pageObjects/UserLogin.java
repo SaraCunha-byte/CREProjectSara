@@ -29,6 +29,7 @@ public class UserLogin {
 		signIn = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Sign In']")));
 		signIn.click();
+		TestUtils.testSleep();
 	}
 
 	public void userNameField(String username) {
@@ -40,7 +41,7 @@ public class UserLogin {
 
 	public void passwordField(String password) {
 		passwordField = new WebDriverWait(driver, Duration.ofSeconds(5))
-				.until(ExpectedConditions.elementToBeClickable(By.name("password")));
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@name='password'])[1]")));
 		passwordField.clear();
 		passwordField.sendKeys(password);
 		TestUtils.testSleep();
@@ -50,12 +51,14 @@ public class UserLogin {
 		logInButton = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("input[value='Login']")));
 		logInButton.click();
+		TestUtils.testSleep();
 	}
 
 	public void verifyLogIn() {
 		logInVerification = new WebDriverWait(driver, Duration.ofSeconds(5))
 				.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#WelcomeContent")));
 		assertEquals(logInVerification.getText(), "Welcome Pet!");
+		TestUtils.testSleep();
 	}
 
 }
