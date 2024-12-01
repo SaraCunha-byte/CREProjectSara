@@ -1,18 +1,18 @@
-Frameworks used: Selenium, Cucumber
+**Frameworks used:** Selenium, Cucumber
 
-Testing framework: TestNG, Allure Report, JUnit
+**Testing framework:** TestNG, Allure Report, JUnit
 
-Programming language: JAVA
+**Programming language:** JAVA
 
-Build tool: Maven
+**Build tool:** Maven
 
-CI/CD Tool: Jenkins
+**CI/CD Tool:** Jenkins
 
-Repository: GitHub
+**Repository:** GitHub
 
-Website used: https://petstore.octoperf.com/actions/Catalog.action
+**Website used:** https://petstore.octoperf.com/actions/Catalog.action
 
-Tests required:
+**Tests required:**
 
 -	User registration
 
