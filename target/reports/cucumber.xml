@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="93.424" tests="12" skipped="0" failures="0" errors="0">
+<testcase classname="Add product to Cart" name="Adding a product to the cart - Example #1.1" time="4.456">
+<system-out><![CDATA[
+Given I am on the homepage using "chrome"...................................passed
+And I enter "iguana" in the search bar......................................passed
+And I click on the item after searching "iguana"............................passed
+Then I click on the Add to cart button......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Add product to Cart" name="Adding a product to the cart - Example #1.2" time="6.038">
+<system-out><![CDATA[
+Given I am on the homepage using "firefox"..................................passed
+And I enter "iguana" in the search bar......................................passed
+And I click on the item after searching "iguana"............................passed
+Then I click on the Add to cart button......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Purchase" name="Successful purchase of a product - Example #1.1" time="8.147">
+<system-out><![CDATA[
+Given I am on the homepage using "chrome"...................................passed
+And I am autenticated with "PetStoreTest" and "123456789"...................passed
+And I add a product to the cart using "iguana"..............................passed
+When I proceed to checkout..................................................passed
+And I fill out my payment details...........................................passed
+And I click the Continue button.............................................passed
+And I confirm the order.....................................................passed
+Then I should see a confirmation message....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Purchase" name="Successful purchase of a product - Example #1.2" time="10.094">
+<system-out><![CDATA[
+Given I am on the homepage using "firefox"..................................passed
+And I am autenticated with "PetStoreTest" and "123456789"...................passed
+And I add a product to the cart using "iguana"..............................passed
+When I proceed to checkout..................................................passed
+And I fill out my payment details...........................................passed
+And I click the Continue button.............................................passed
+And I confirm the order.....................................................passed
+Then I should see a confirmation message....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Visualize Item" name="Successful search for an existing product - Example #1.1" time="3.162">
+<system-out><![CDATA[
+Given I am on the homepage using "chrome"...................................passed
+When I enter "dog food" in the search bar...................................passed
+And I click the Search button...............................................passed
+Then I should see a list of products related to "dog food"..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Visualize Item" name="Successful search for an existing product - Example #1.2" time="5.685">
+<system-out><![CDATA[
+Given I am on the homepage using "firefox"..................................passed
+When I enter "dog food" in the search bar...................................passed
+And I click the Search button...............................................passed
+Then I should see a list of products related to "dog food"..................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Visualize Item" name="Correctly viewing product details - Example #1.1" time="3.466">
+<system-out><![CDATA[
+Given I am on the homepage using "chrome"...................................passed
+And I searched for "dog food" and results are displayed.....................passed
+When I click on the first item..............................................passed
+Then I should be redirected to the product details page.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search and Visualize Item" name="Correctly viewing product details - Example #1.2" time="5.97">
+<system-out><![CDATA[
+Given I am on the homepage using "firefox"..................................passed
+And I searched for "dog food" and results are displayed.....................passed
+When I click on the first item..............................................passed
+Then I should be redirected to the product details page.....................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Successful login with valid credentials - Example #1.1" time="4.36">
+<system-out><![CDATA[
+Given I am on the homepage using "chrome"...................................passed
+And I navigate to the login page............................................passed
+When I enter my "PetStoreTest" and "123456789"..............................passed
+And I click the Login button................................................passed
+Then I should see a welcome message.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Successful login with valid credentials - Example #1.2" time="6.669">
+<system-out><![CDATA[
+Given I am on the homepage using "firefox"..................................passed
+And I navigate to the login page............................................passed
+When I enter my "PetStoreTest" and "123456789"..............................passed
+And I click the Login button................................................passed
+Then I should see a welcome message.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="New User Registration" name="Successful user registration - Example #1.1" time="16.767">
+<system-out><![CDATA[
+Given I am on the homepage using "chrome"...................................passed
+And I navigate to the Account registration page.............................passed
+When I fill out the required account information with valid values..........passed
+And I click the Save Account Information button.............................passed
+Then I should be redirected to the home page................................passed
+]]></system-out>
+</testcase>
+<testcase classname="New User Registration" name="Successful user registration - Example #1.2" time="18.319">
+<system-out><![CDATA[
+Given I am on the homepage using "firefox"..................................passed
+And I navigate to the Account registration page.............................passed
+When I fill out the required account information with valid values..........passed
+And I click the Save Account Information button.............................passed
+Then I should be redirected to the home page................................passed
+]]></system-out>
+</testcase>
+</testsuite>
